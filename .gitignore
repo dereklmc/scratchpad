@@ -1,0 +1,17 @@
+# Program output
+
+*.out
+*.log
+
+
+# Compiled Program
+
+*.run
+*.app
+*.cmd
+*.class
+*.jar
+
+# TMP files
+
+*~

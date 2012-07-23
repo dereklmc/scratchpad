@@ -1,0 +1,45 @@
+#!/usr/bin/python -O
+
+import sys
+from collections import deque, defaultdict
+
+def readValidLine(urFile):
+    line = ""
+    while not line.strip():
+        line = urFile.readline()
+    return line.strip()
+
+def main(argv):
+    fileName = argv[1]
+    urFile = open(fileName)
+    numMembers = int(readValidLine(urFile))
+    members = defaultdict(list)
+    currentVet = ""
+    for line in urFile:
+        line = line.strip()
+        if line:
+            lineData = line.split()
+            if len(lineData) is 2:
+                currentVet, strNumAccused = lineData
+            else:
+                members[currentVet].append(line)
+                members[line].append(currentVet)
+    memberQueue = deque([])
+    groupA = set([])
+    if currentVet:
+        memberQueue.append(currentVet)
+        groupA.add(currentVet)
+    groupB = set([])
+    while memberQueue:
+        veteran = memberQueue.popleft()
+        accused = members[veteran]
+        accused = filter(lambda acc: acc not in groupA and acc not in groupB, accused)
+        if veteran in groupA:
+            groupB.update(accused)
+        else:
+            groupA.update(accused)
+        memberQueue.extend(accused)
+    groupSizes = sorted([len(groupA),len(groupB)], reverse=True)
+    sys.stdout.write('%s %s\n' % (groupSizes[0],groupSizes[1]))
+if __name__ == '__main__':
+    main(sys.argv)

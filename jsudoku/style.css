@@ -1,0 +1,56 @@
+div {
+    display: block;
+}
+
+span.found {
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 66px;
+}
+
+#candidates, .sblock, .srow, .scol{
+     position: absolute;
+}
+
+#candidates {
+    position: absolute;
+    margin: 50px;
+    top: 0;
+    left: 0;
+}
+
+#candidates .sblock {
+    margin: 0px;
+}
+
+#candidates .srow {
+    width: 210px;
+    height: 66px;
+    left: 0;
+}
+
+#candidates .scol {
+    border: solid 1px LightGray;
+    width: 70px;
+    height: 66px;
+    text-align: center;
+    padding: auto;
+    line-height: 22px;
+}
+
+#candidates .sblock.b0,.sblock.b1,.sblock.b2 { top: 0px; }
+#candidates .sblock.b3,.sblock.b4,.sblock.b5 { top: 250px; }
+#candidates .sblock.b6,.sblock.b7,.sblock.b8 { top: 500px; }
+
+#candidates .sblock.b0,.sblock.b3,.sblock.b6 { left: 0px; }
+#candidates .sblock.b1,.sblock.b4,.sblock.b7 { left: 250px; }
+#candidates .sblock.b2,.sblock.b5,.sblock.b8 { left: 500px; }
+
+#candidates .srow.r0,.srow.r3,.srow.r6 { top: 0px; }
+#candidates .srow.r1,.srow.r4,.srow.r7 { top: 80px; }
+#candidates .srow.r2,.srow.r5,.srow.r8 { top: 160px; }
+
+#candidates .scol.c0,.scol.c3,.scol.c6 { left: 0px; }
+#candidates .scol.c1,.scol.c4,.scol.c7 { left: 80px; }
+#candidates .scol.c2,.scol.c5,.scol.c8 { left: 160px; }

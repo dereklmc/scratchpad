@@ -1,0 +1,976 @@
+<html>
+<head>
+<title>OO JS</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="sudoku.js"></script>
+</head>
+<body>
+<div id="candidates">
+    <div class="sblock b0">
+        <div class="srow r0">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r1">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r2">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b1">
+        <div class="srow r0">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r1">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r2">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b2">
+        <div class="srow r0">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r1">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r2">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b3">
+        <div class="srow r3">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r4">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r5">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b4">
+        <div class="srow r3">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r4">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r5">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b5">
+        <div class="srow r3">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r4">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r5">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b6">
+        <div class="srow r6">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r7">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r8">
+            <div class="scol c0">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c1">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c2">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b7">
+        <div class="srow r6">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r7">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r8">
+            <div class="scol c3">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c4">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c5">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+    <div class="sblock b8">
+        <div class="srow r6">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r7">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+        <div class="srow r8">
+            <div class="scol c6">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c7">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+            <div class="scol c8">
+                <span class="n1">1</span>&ensp;
+                <span class="n2">2</span>&ensp;
+                <span class="n3">3</span>&ensp;<br />
+                <span class="n4">4</span>&ensp;
+                <span class="n5">5</span>&ensp;
+                <span class="n6">6</span>&ensp;<br />
+                <span class="n7">7</span>&ensp;
+                <span class="n8">8</span>&ensp;
+                <span class="n9">9</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<html>
